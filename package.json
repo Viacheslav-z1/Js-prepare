@@ -1,0 +1,30 @@
+{
+  "name": "js-prepare",
+  "version": "1.0.0",
+  "description": "This is js-prepare",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viacheslav-z1/Js-prepare.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Slavik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Viacheslav-z1/Js-prepare/issues"
+  },
+  "homepage": "https://github.com/Viacheslav-z1/Js-prepare#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
