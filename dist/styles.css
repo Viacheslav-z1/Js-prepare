@@ -2,6 +2,11 @@
   display: none !important;
 }
 
+.title{
+  display: none !important;
+}
+
+
 .w-container {
   margin: 0 auto;
   width: 600px;

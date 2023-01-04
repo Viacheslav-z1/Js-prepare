@@ -1,6 +1,5 @@
+import {Header} from "./components/header";
+import "../dist/styles.css";
 
-async function ddd() {
-  await fetch('ede')
-}
-
-console.log('assadasd');
+const header = new Header("header");
+console.log(header);
