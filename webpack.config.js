@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+
 module.exports = {
   entry: ["@babel/polyfill", "./src/index.js"],
   output: {
@@ -8,8 +9,11 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, "public"),
+      directory: path.resolve(__dirname, "static"),
     },
+    compress: true,
+    port: 9000,
+    open: true,
   },
 
   plugins: [
@@ -32,6 +36,10 @@ module.exports = {
             presets: ["@babel/preset-env"],
           },
         },
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ],
   },
