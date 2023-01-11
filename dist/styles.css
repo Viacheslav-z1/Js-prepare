@@ -6,6 +6,10 @@
   overflow: hidden;
 }
 
+.center{
+  text-align: center;
+}
+
 #header{
   position: absolute;
   left: 0;
