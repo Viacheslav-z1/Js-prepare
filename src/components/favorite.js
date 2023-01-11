@@ -21,11 +21,11 @@ export class Favorite extends Component {
 
 
 function renderList(list = []) {
-  if(list.length){
+  if(list){
     return `
     <ul>
     ${list.map(item =>{
-     return `<li><a class='js-link' href='#'>${item}</a></li>`
+     return `<li><a class='js-link' data-id='${item.id}' href='#'>${item.title}</a></li>`;
     }).join(' ')}
     </ul>`
   }
@@ -35,7 +35,7 @@ function renderList(list = []) {
 async function linkClick(e) {
   e.preventDefault();
   if(e.target.classList.contains('js-link')){
-    const postId = e.target.textContent;
+    const postId = e.target.dataset.id;
     this.$el.innerHTML = '';
     this.loader.show();
     const post = await apiSservice.fetchPostById(postId);
